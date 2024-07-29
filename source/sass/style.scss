@@ -1,4 +1,31 @@
 // Vendor
-// ---------------------------------
 
-@import "vendor/normalize";
+@import "./vendor/normalize";
+
+// Global
+
+@import "./global/utils";
+@import "./global/variables";
+@import "./global/fonts";
+@import "./global/base";
+
+// Blocks
+
+@import "./blocks/container";
+@import "./blocks/header";
+@import "./blocks/logo";
+@import "./blocks/main-container";
+@import "./blocks/title";
+@import "./blocks/about";
+@import "./blocks/price";
+@import "./blocks/games";
+@import "./blocks/games-data";
+@import "./blocks/jury";
+@import "./blocks/features";
+@import "./blocks/offers";
+@import "./blocks/link";
+@import "./blocks/faq";
+@import "./blocks/reviews";
+@import "./blocks/form";
+@import "./blocks/contacts";
+@import "./blocks/footer";

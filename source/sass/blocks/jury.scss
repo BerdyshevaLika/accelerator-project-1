@@ -1,0 +1,225 @@
+.jury__container {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  text-align: center;
+
+  @media (min-width: $vp-768) {
+    padding-top: 30px;
+    padding-bottom: 60px;
+  }
+
+  @media (min-width: $vp-1366) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+.jury__title {
+  margin-bottom: 20px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 46px;
+
+    font-size: 54px;
+    line-height: 54px;
+  }
+}
+
+.jury__slider {
+  padding: 0 15px;
+
+  @media (min-width: $vp-768) {
+    position: relative;
+
+    padding: 0 59px;
+  }
+
+  @media (min-width: $vp-1366) {
+    padding: 0;
+  }
+}
+
+.jury__slider-slide {
+  position: relative;
+}
+
+.jury__slider-slide:hover .jury__slider-info,
+.jury__slider-slide:focus .jury__slider-info {
+  display: block;
+}
+
+.jury__slider-slide:hover .jury__slider-title,
+.jury__slider-slide:focus .jury__slider-title {
+  display: none;
+}
+
+.jury__slider-title {
+  position: absolute;
+  bottom: 25px;
+  left: 50%;
+
+  width: 180px;
+  margin: 0;
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 22px;
+  color: $color-white;
+
+  transform: translateX(-50%);
+}
+
+.jury__slider-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: none;
+  width: 260px;
+  height: 300px;
+  padding: 46px 50px 50px 51px;
+
+  text-align: center;
+
+  background-color: rgba($color-tory-blue, 0.89);
+  box-shadow: 0 0 35px 0 rgba($color-gluf-blue, 0.17);
+}
+
+.jury__slider-info-name {
+  margin: 0 0 8px 0;
+
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 22px;
+  color: $color-white;
+}
+
+.jury__slider-info-text {
+  display: block;
+  padding-bottom: 34px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 24px;
+  color: $color-spindle;
+}
+
+.jury__slider-info-list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  text-align: start;
+
+  gap: 12px;
+}
+
+.jury__slider-info-item {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color-white;
+}
+
+.jury__controls {
+  display: none;
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    top: 50%;
+    z-index: 2;
+
+    display: block;
+    width: 100%;
+
+    transform: translateY(-50%);
+  }
+}
+
+.jury__controls-button {
+  @media (min-width: $vp-768) {
+    position: absolute;
+
+    width: 50px;
+    height: 50px;
+    padding: 0;
+
+    background-color: $transparent;
+    border: 1px solid $transparent;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &::before {
+      content: "";
+      position: absolute;
+
+      width: 25px;
+      height: 25px;
+
+      border-bottom: 1px solid $color-tory-blue;
+      border-left: 1px solid $color-tory-blue;
+    }
+  }
+
+  &--prev {
+    @media (min-width: $vp-768) {
+      top: -21px;
+      left: -68px;
+    }
+
+    @media (min-width: $vp-1366) {
+      top: -26px;
+      left: -68px;
+    }
+  }
+
+  &--next {
+    @media (min-width: $vp-768) {
+      top: -22px;
+      right: 51px;
+    }
+
+    @media (min-width: $vp-1366) {
+      top: -27px;
+      right: -68px;
+    }
+  }
+
+  &:hover {
+    border-color: $color-tory-blue;
+  }
+
+  &:focus {
+    background-color: $color-whisper;
+    border-color: $color-tory-blue;
+  }
+
+  &:active {
+    background-color: $color-tory-blue;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.jury__controls-button--next::before {
+  top: 10px;
+  left: 6px;
+
+  transform: rotate(-135deg);
+}
+
+.jury__controls-button--prev::before {
+  top: 9px;
+  left: 19px;
+
+  transform: rotate(45deg);
+}
+
+.jury__controls-button:active::before {
+  border-bottom-color: $color-white;
+  border-left-color: $color-white;
+}

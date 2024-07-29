@@ -1,0 +1,243 @@
+.about {
+  padding-top: 40px;
+  padding-bottom: 40px;
+
+  @media (min-width: $vp-768) {
+    padding: 60px 45px 120px;
+  }
+
+  @media (min-width: $vp-1366) {
+    display: grid;
+    padding: 120px 103px 240px;
+
+    gap: 145px;
+    grid-template-columns: 355px 650px;
+  }
+}
+
+.about__info {
+  padding-right: 15px;
+  padding-bottom: 36px;
+  padding-left: 15px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 36px;
+    padding: 0;
+
+    text-align: center;
+  }
+
+  @media (min-width: $vp-1366) {
+    margin: 0;
+
+    text-align: left;
+  }
+}
+
+.about__info-title {
+  margin-bottom: 12px;
+
+  @media (min-width: $vp-768) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $vp-1366) {
+    margin-bottom: 25px;
+  }
+}
+
+.about__info-area {
+  display: block;
+  margin-bottom: 36px;
+
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 20px;
+  color: $color-tory-blue;
+
+  @media (min-width: $vp-768) {
+    font-size: 20px;
+  }
+
+  @media (min-width: $vp-1366) {
+    margin-bottom: 95px;
+
+    font-size: 22px;
+    line-height: 22px;
+  }
+}
+
+.about__info p {
+  margin: 0;
+
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 22px;
+  color: $color-tory-blue;
+
+  @media (min-width: $vp-768) {
+    padding-right: 80px;
+    padding-left: 80px;
+
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $vp-1366) {
+    padding: 0;
+  }
+}
+
+.about__info p:nth-last-child(1) {
+  display: none;
+
+  @media (min-width: $vp-1366) {
+    display: block;
+    margin-top: 9px;
+  }
+}
+
+.about__wrapper {
+  position: relative;
+}
+
+.about__video img {
+  background-size: cover;
+}
+
+.about__video-wrapper {
+  position: relative;
+
+  width: 320px;
+  height: 170px;
+  margin-top: 36px;
+
+  background-image: url("../../img/about/video-mobile.jpg");
+  background-size: 320px 170px;
+
+  @media (resolution >= 2dppx) {
+    background-image: url("../../img/about/video-mobile@2x.jpg");
+  }
+
+  &--hidden {
+    display: none;
+  }
+
+  @media (min-width: $vp-768) {
+    position: absolute;
+    bottom: -85px;
+    left: 50%;
+
+    width: 270px;
+
+    background-image: url("../../img/about/video-tablet.jpg");
+    background-size: 270px 170px;
+    transform: translateX(-50%);
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../../img/about/video-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: $vp-1366) {
+    bottom: -115px;
+    left: -100px;
+
+    width: 360px;
+    height: 230px;
+
+    background-image: url("../../img/about/video-desktop.jpg");
+    background-size: 360px 230px;
+    transform: none;
+
+    @media (resolution >= 2dppx) {
+      background-image: url("../../img/about/video-desktop@2x.jpg");
+    }
+  }
+}
+
+.about__video-iframe {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  border: none;
+
+  &--hidden {
+    display: none;
+  }
+}
+
+.about__video-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: 52px;
+  height: 52px;
+  padding: 20px;
+
+  background: linear-gradient(97.05deg, $color-torch-red 17.6%, $color-cobalt 95.31%);
+  border: none;
+  border-radius: 50%;
+  outline: 2px solid rgba($color-torch-red, 0.2);
+  outline-offset: 10px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+
+  &--hidden {
+    display: none;
+  }
+
+  @media (min-width: $vp-1366) {
+    width: 72px;
+    height: 72px;
+    padding: 27px 27px 28px 28px;
+
+    outline-offset: 14px;
+  }
+
+  &:hover {
+    background: $color-white;
+    outline-color: rgba($color-tory-blue, 0.6);
+  }
+
+  &:focus {
+    background: $color-link-water;
+    outline-color: $color-tory-blue;
+  }
+
+  &:active {
+    background: $color-white;
+    outline-color: $color-tory-blue;
+  }
+
+  &:disabled {
+    background: $color-white;
+    outline-color: $color-tory-blue;
+    opacity: 0.4;
+  }
+}
+
+.about__video-button svg {
+  width: 12px;
+  height: 12px;
+
+  color: $color-white;
+
+  @media (min-width: $vp-768) {
+    width: 17px;
+    height: 17px;
+  }
+}
+
+.about__video-button:hover svg {
+  color: rgba($color-tory-blue, 0.6);
+}
+
+.about__video-button:focus svg,
+.about__video-button:active svg,
+.about__video-button:disabled svg {
+  color: $color-tory-blue;
+}

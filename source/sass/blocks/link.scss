@@ -1,0 +1,44 @@
+.link {
+  display: block;
+  max-width: 73px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-resolution-blue-link;
+  text-transform: uppercase;
+
+  text-decoration-color: $color-light-slate-grey;
+  text-underline-offset: 7px;
+
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:focus {
+    text-decoration: none;
+
+    outline: 1px solid $color-resolution-blue-link;
+    outline-offset: 10px;
+  }
+
+  &:active {
+    outline: none;
+    opacity: 1;
+  }
+
+  &:disabled {
+    opacity: 0.3;
+  }
+}
+
+.link--white {
+  color: $color-white;
+
+  text-decoration-color: $color-white;
+
+  &:focus {
+    outline: 1px solid $color-white;
+  }
+}

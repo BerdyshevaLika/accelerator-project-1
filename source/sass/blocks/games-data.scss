@@ -1,0 +1,88 @@
+.games-data {
+  display: flex;
+  flex-direction: column;
+
+  gap: 5px;
+
+  @media (min-width: $vp-768) {
+    gap: 10px;
+  }
+
+  @media (min-width: $vp-1366) {
+    gap: 20px;
+  }
+}
+
+.games-data__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  gap: 2px;
+
+  @media (min-width: $vp-768) {
+    gap: 0;
+  }
+
+  @media (min-width: $vp-1366) {
+    gap: 6px;
+  }
+}
+
+.games-data__wrapper div {
+  display: flex;
+
+  gap: 0 3px;
+
+  @media (min-width: $vp-768) {
+    gap: 5px;
+  }
+}
+
+.games-data__title {
+  margin: 0;
+  padding-bottom: 2px;
+
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+  color: $color-white;
+
+  border-bottom: 1px solid $color-white;
+
+  @media (min-width: $vp-768) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.games-data__month {
+  display: flex;
+  flex-direction: column;
+}
+
+.games-data__number {
+  display: flex;
+  align-items: center;
+
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 24px;
+  color: $color-white;
+
+  @media (min-width: $vp-1366) {
+    font-size: 40px;
+    line-height: 40px;
+  }
+}
+
+.games-data__month span {
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 12px;
+  color: $color-white;
+
+  @media (min-width: $vp-768) {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
